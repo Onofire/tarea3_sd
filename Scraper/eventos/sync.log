@@ -1,0 +1,734 @@
+2025-07-01 02:57:27,711 - INFO - 🔄 Comenzando nueva sincronización Mongo ➝ Elasticsearch
+2025-07-01 02:57:27,712 - INFO - 📤 Exportando colección 'alerts' a Elasticsearch
+2025-07-01 02:57:28,234 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 02:57:28,235 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 1 times in a row, putting on 1 second timeout
+2025-07-01 02:57:28,235 - WARNING - Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7d31d2d72ec0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7d31d2d72ec0>: Failed to establish a new connection: [Errno 111] Connection refused)
+2025-07-01 02:57:28,237 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 02:57:28,237 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 2 times in a row, putting on 2 second timeout
+2025-07-01 02:57:28,237 - WARNING - Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7d31d2d730d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7d31d2d730d0>: Failed to establish a new connection: [Errno 111] Connection refused)
+2025-07-01 02:57:28,238 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 02:57:28,238 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 3 times in a row, putting on 4 second timeout
+2025-07-01 02:57:28,238 - WARNING - Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7d31d2d73310>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7d31d2d73310>: Failed to establish a new connection: [Errno 111] Connection refused)
+2025-07-01 02:57:28,239 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 02:57:28,239 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 4 times in a row, putting on 8 second timeout
+2025-07-01 02:57:28,239 - ERROR - ❌ Error exportando 'alerts': Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7d31d2d72ec0>: Failed to establish a new connection: [Errno 111] Connection refused))
+2025-07-01 02:57:28,239 - INFO - 📤 Exportando colección 'jams' a Elasticsearch
+2025-07-01 02:57:28,252 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 02:57:28,253 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 5 times in a row, putting on 16 second timeout
+2025-07-01 02:57:28,253 - WARNING - Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7d31d2d732b0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7d31d2d732b0>: Failed to establish a new connection: [Errno 111] Connection refused)
+2025-07-01 02:57:28,254 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 02:57:28,254 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 6 times in a row, putting on 30 second timeout
+2025-07-01 02:57:28,254 - WARNING - Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7d31d2d730d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7d31d2d730d0>: Failed to establish a new connection: [Errno 111] Connection refused)
+2025-07-01 02:57:28,255 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 02:57:28,256 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 7 times in a row, putting on 30 second timeout
+2025-07-01 02:57:28,256 - WARNING - Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7d31d2d72ec0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7d31d2d72ec0>: Failed to establish a new connection: [Errno 111] Connection refused)
+2025-07-01 02:57:28,257 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 02:57:28,257 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 8 times in a row, putting on 30 second timeout
+2025-07-01 02:57:28,257 - ERROR - ❌ Error exportando 'jams': Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7d31d2d732b0>: Failed to establish a new connection: [Errno 111] Connection refused))
+2025-07-01 02:57:28,257 - INFO - 📤 Exportando colección 'users' a Elasticsearch
+2025-07-01 02:57:28,258 - WARNING - ⚠ Colección 'users' vacía
+2025-07-01 02:57:28,258 - INFO - 🕓 Esperando 5 minutos para la próxima sincronización
+
+2025-07-01 02:59:28,321 - INFO - 🔄 Comenzando nueva sincronización Mongo ➝ Elasticsearch
+2025-07-01 02:59:28,321 - INFO - 📤 Exportando colección 'alerts' a Elasticsearch
+2025-07-01 02:59:28,337 - INFO - Resurrected node <Urllib3HttpNode(http://elasticsearch:9200)> (force=False)
+2025-07-01 02:59:28,345 - INFO - PUT http://elasticsearch:9200/_bulk [status:400 duration:0.008s]
+2025-07-01 02:59:28,346 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has been marked alive after a successful request
+2025-07-01 02:59:28,346 - ERROR - ❌ Error exportando 'alerts': BadRequestError(400, 'media_type_header_exception', 'Invalid media-type value on headers [Accept, Content-Type]', Accept version must be either version 8 or 7, but found 9. Accept=application/vnd.elasticsearch+json; compatible-with=9)
+2025-07-01 02:59:28,346 - INFO - 📤 Exportando colección 'jams' a Elasticsearch
+2025-07-01 02:59:28,357 - INFO - Resurrected node <Urllib3HttpNode(http://elasticsearch:9200)> (force=False)
+2025-07-01 02:59:28,359 - INFO - PUT http://elasticsearch:9200/_bulk [status:400 duration:0.002s]
+2025-07-01 02:59:28,359 - ERROR - ❌ Error exportando 'jams': BadRequestError(400, 'media_type_header_exception', 'Invalid media-type value on headers [Accept, Content-Type]', Accept version must be either version 8 or 7, but found 9. Accept=application/vnd.elasticsearch+json; compatible-with=9)
+2025-07-01 02:59:28,359 - INFO - 📤 Exportando colección 'users' a Elasticsearch
+2025-07-01 02:59:28,361 - WARNING - ⚠ Colección 'users' vacía
+2025-07-01 02:59:28,361 - INFO - 🕓 Esperando 5 minutos para la próxima sincronización
+
+2025-07-01 03:01:28,457 - INFO - 🔄 Comenzando nueva sincronización Mongo ➝ Elasticsearch
+2025-07-01 03:01:28,457 - INFO - 📤 Exportando colección 'alerts' a Elasticsearch
+2025-07-01 03:01:28,474 - INFO - Resurrected node <Urllib3HttpNode(http://elasticsearch:9200)> (force=False)
+2025-07-01 03:01:28,476 - INFO - PUT http://elasticsearch:9200/_bulk [status:400 duration:0.002s]
+2025-07-01 03:01:28,476 - ERROR - ❌ Error exportando 'alerts': BadRequestError(400, 'media_type_header_exception', 'Invalid media-type value on headers [Accept, Content-Type]', Accept version must be either version 8 or 7, but found 9. Accept=application/vnd.elasticsearch+json; compatible-with=9)
+2025-07-01 03:01:28,476 - INFO - 📤 Exportando colección 'jams' a Elasticsearch
+2025-07-01 03:01:28,500 - INFO - Resurrected node <Urllib3HttpNode(http://elasticsearch:9200)> (force=False)
+2025-07-01 03:01:28,504 - INFO - PUT http://elasticsearch:9200/_bulk [status:400 duration:0.003s]
+2025-07-01 03:01:28,505 - ERROR - ❌ Error exportando 'jams': BadRequestError(400, 'media_type_header_exception', 'Invalid media-type value on headers [Accept, Content-Type]', Accept version must be either version 8 or 7, but found 9. Accept=application/vnd.elasticsearch+json; compatible-with=9)
+2025-07-01 03:01:28,505 - INFO - 📤 Exportando colección 'users' a Elasticsearch
+2025-07-01 03:01:28,506 - WARNING - ⚠ Colección 'users' vacía
+2025-07-01 03:01:28,506 - INFO - 🕓 Esperando 5 minutos para la próxima sincronización
+
+2025-07-01 03:03:23,040 - INFO - 🔄 Comenzando nueva sincronización Mongo ➝ Elasticsearch
+2025-07-01 03:03:23,041 - INFO - 📤 Exportando colección 'alerts' a Elasticsearch
+2025-07-01 03:03:23,068 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.003s]
+2025-07-01 03:03:23,068 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 1 times in a row, putting on 1 second timeout
+2025-07-01 03:03:23,068 - WARNING - Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x792d64414d00>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x792d64414d00>: Failed to establish a new connection: [Errno 111] Connection refused)
+2025-07-01 03:03:23,071 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 03:03:23,071 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 2 times in a row, putting on 2 second timeout
+2025-07-01 03:03:23,072 - WARNING - Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x792d64414f10>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x792d64414f10>: Failed to establish a new connection: [Errno 111] Connection refused)
+2025-07-01 03:03:23,073 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 03:03:23,073 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 3 times in a row, putting on 4 second timeout
+2025-07-01 03:03:23,073 - WARNING - Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x792d64415150>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x792d64415150>: Failed to establish a new connection: [Errno 111] Connection refused)
+2025-07-01 03:03:23,075 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 03:03:23,075 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 4 times in a row, putting on 8 second timeout
+2025-07-01 03:03:23,075 - ERROR - ❌ Error exportando 'alerts': Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x792d64414d00>: Failed to establish a new connection: [Errno 111] Connection refused))
+2025-07-01 03:03:23,075 - INFO - 📤 Exportando colección 'jams' a Elasticsearch
+2025-07-01 03:03:23,084 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 03:03:23,084 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 5 times in a row, putting on 16 second timeout
+2025-07-01 03:03:23,085 - WARNING - Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x792d644eb1c0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x792d644eb1c0>: Failed to establish a new connection: [Errno 111] Connection refused)
+2025-07-01 03:03:23,086 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 03:03:23,086 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 6 times in a row, putting on 30 second timeout
+2025-07-01 03:03:23,086 - WARNING - Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x792d644eafb0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x792d644eafb0>: Failed to establish a new connection: [Errno 111] Connection refused)
+2025-07-01 03:03:23,087 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 03:03:23,087 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 7 times in a row, putting on 30 second timeout
+2025-07-01 03:03:23,087 - WARNING - Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x792d644eadd0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "/usr/local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x792d644eadd0>: Failed to establish a new connection: [Errno 111] Connection refused)
+2025-07-01 03:03:23,088 - INFO - PUT http://elasticsearch:9200/_bulk [status:N/A duration:0.001s]
+2025-07-01 03:03:23,088 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 8 times in a row, putting on 30 second timeout
+2025-07-01 03:03:23,088 - ERROR - ❌ Error exportando 'jams': Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x792d644eb1c0>: Failed to establish a new connection: [Errno 111] Connection refused))
+2025-07-01 03:03:23,088 - INFO - 📤 Exportando colección 'users' a Elasticsearch
+2025-07-01 03:03:23,089 - WARNING - ⚠ Colección 'users' vacía
+2025-07-01 03:03:23,089 - INFO - 🕓 Esperando 5 minutos para la próxima sincronización
+
+2025-07-01 03:05:23,190 - INFO - 🔄 Comenzando nueva sincronización Mongo ➝ Elasticsearch
+2025-07-01 03:05:23,190 - INFO - 📤 Exportando colección 'alerts' a Elasticsearch
+2025-07-01 03:05:23,215 - INFO - Resurrected node <Urllib3HttpNode(http://elasticsearch:9200)> (force=False)
+2025-07-01 03:05:23,594 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.379s]
+2025-07-01 03:05:23,595 - WARNING - Node <Urllib3HttpNode(http://elasticsearch:9200)> has been marked alive after a successful request
+2025-07-01 03:05:23,597 - INFO - Resurrected node <Urllib3HttpNode(http://elasticsearch:9200)> (force=False)
+2025-07-01 03:05:23,628 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.031s]
+2025-07-01 03:05:23,629 - INFO - ✅ Insertados 695 documentos en índice 'alerts'
+2025-07-01 03:05:23,630 - INFO - 📤 Exportando colección 'jams' a Elasticsearch
+2025-07-01 03:05:23,637 - INFO - Resurrected node <Urllib3HttpNode(http://elasticsearch:9200)> (force=False)
+2025-07-01 03:05:23,810 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.173s]
+2025-07-01 03:05:23,823 - INFO - ✅ Insertados 313 documentos en índice 'jams'
+2025-07-01 03:05:23,824 - INFO - 📤 Exportando colección 'users' a Elasticsearch
+2025-07-01 03:05:23,824 - WARNING - ⚠ Colección 'users' vacía
+2025-07-01 03:05:23,824 - INFO - 🕓 Esperando 5 minutos para la próxima sincronización
+
+2025-07-01 03:07:23,924 - INFO - 🔄 Comenzando nueva sincronización Mongo ➝ Elasticsearch
+2025-07-01 03:07:23,925 - INFO - 📤 Exportando colección 'alerts' a Elasticsearch
+2025-07-01 03:07:23,935 - INFO - Resurrected node <Urllib3HttpNode(http://elasticsearch:9200)> (force=False)
+2025-07-01 03:07:23,998 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.063s]
+2025-07-01 03:07:24,006 - INFO - Resurrected node <Urllib3HttpNode(http://elasticsearch:9200)> (force=False)
+2025-07-01 03:07:24,036 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.030s]
+2025-07-01 03:07:24,037 - INFO - ✅ Insertados 732 documentos en índice 'alerts'
+2025-07-01 03:07:24,038 - INFO - 📤 Exportando colección 'jams' a Elasticsearch
+2025-07-01 03:07:24,046 - INFO - Resurrected node <Urllib3HttpNode(http://elasticsearch:9200)> (force=False)
+2025-07-01 03:07:24,081 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.035s]
+2025-07-01 03:07:24,083 - INFO - ✅ Insertados 335 documentos en índice 'jams'
+2025-07-01 03:07:24,084 - INFO - 📤 Exportando colección 'users' a Elasticsearch
+2025-07-01 03:07:24,085 - WARNING - ⚠ Colección 'users' vacía
+2025-07-01 03:07:24,085 - INFO - 🕓 Esperando 5 minutos para la próxima sincronización
+
+2025-07-01 03:09:24,169 - INFO - 🔄 Comenzando nueva sincronización Mongo ➝ Elasticsearch
+2025-07-01 03:09:24,170 - INFO - 📤 Exportando colección 'alerts' a Elasticsearch
+2025-07-01 03:09:24,190 - INFO - Resurrected node <Urllib3HttpNode(http://elasticsearch:9200)> (force=False)
+2025-07-01 03:09:24,257 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.067s]
+2025-07-01 03:09:24,266 - INFO - Resurrected node <Urllib3HttpNode(http://elasticsearch:9200)> (force=False)
+2025-07-01 03:09:24,293 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.027s]
+2025-07-01 03:09:24,294 - INFO - ✅ Insertados 732 documentos en índice 'alerts'
+2025-07-01 03:09:24,295 - INFO - 📤 Exportando colección 'jams' a Elasticsearch
+2025-07-01 03:09:24,348 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.040s]
+2025-07-01 03:09:24,349 - INFO - ✅ Insertados 335 documentos en índice 'jams'
+2025-07-01 03:09:24,350 - INFO - 📤 Exportando colección 'users' a Elasticsearch
+2025-07-01 03:09:24,351 - WARNING - ⚠ Colección 'users' vacía
+2025-07-01 03:09:24,351 - INFO - 🕓 Esperando 5 minutos para la próxima sincronización
+
+2025-07-01 03:11:24,451 - INFO - 🔄 Comenzando nueva sincronización Mongo ➝ Elasticsearch
+2025-07-01 03:11:24,451 - INFO - 📤 Exportando colección 'alerts' a Elasticsearch
+2025-07-01 03:11:24,521 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.052s]
+2025-07-01 03:11:24,561 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.031s]
+2025-07-01 03:11:24,563 - INFO - ✅ Insertados 771 documentos en índice 'alerts'
+2025-07-01 03:11:24,564 - INFO - 📤 Exportando colección 'jams' a Elasticsearch
+2025-07-01 03:11:24,619 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.039s]
+2025-07-01 03:11:24,621 - INFO - ✅ Insertados 351 documentos en índice 'jams'
+2025-07-01 03:11:24,622 - INFO - 📤 Exportando colección 'users' a Elasticsearch
+2025-07-01 03:11:24,624 - WARNING - ⚠ Colección 'users' vacía
+2025-07-01 03:11:24,624 - INFO - 🕓 Esperando 5 minutos para la próxima sincronización
+
+2025-07-01 03:13:24,683 - INFO - 🔄 Comenzando nueva sincronización Mongo ➝ Elasticsearch
+2025-07-01 03:13:24,684 - INFO - 📤 Exportando colección 'alerts' a Elasticsearch
+2025-07-01 03:13:24,751 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.049s]
+2025-07-01 03:13:24,786 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.028s]
+2025-07-01 03:13:24,789 - INFO - ✅ Insertados 771 documentos en índice 'alerts'
+2025-07-01 03:13:24,792 - INFO - 📤 Exportando colección 'jams' a Elasticsearch
+2025-07-01 03:13:24,852 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.043s]
+2025-07-01 03:13:24,855 - INFO - ✅ Insertados 351 documentos en índice 'jams'
+2025-07-01 03:13:24,856 - INFO - 📤 Exportando colección 'users' a Elasticsearch
+2025-07-01 03:13:24,858 - WARNING - ⚠ Colección 'users' vacía
+2025-07-01 03:13:24,858 - INFO - 🕓 Esperando 5 minutos para la próxima sincronización
+
+2025-07-01 03:15:24,881 - INFO - 🔄 Comenzando nueva sincronización Mongo ➝ Elasticsearch
+2025-07-01 03:15:24,882 - INFO - 📤 Exportando colección 'alerts' a Elasticsearch
+2025-07-01 03:15:24,955 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.049s]
+2025-07-01 03:15:24,999 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.030s]
+2025-07-01 03:15:25,000 - INFO - ✅ Insertados 809 documentos en índice 'alerts'
+2025-07-01 03:15:25,001 - INFO - 📤 Exportando colección 'jams' a Elasticsearch
+2025-07-01 03:15:25,042 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.029s]
+2025-07-01 03:15:25,044 - INFO - ✅ Insertados 366 documentos en índice 'jams'
+2025-07-01 03:15:25,044 - INFO - 📤 Exportando colección 'users' a Elasticsearch
+2025-07-01 03:15:25,045 - WARNING - ⚠ Colección 'users' vacía
+2025-07-01 03:15:25,045 - INFO - 🕓 Esperando 5 minutos para la próxima sincronización
+
+2025-07-01 03:17:25,116 - INFO - 🔄 Comenzando nueva sincronización Mongo ➝ Elasticsearch
+2025-07-01 03:17:25,116 - INFO - 📤 Exportando colección 'alerts' a Elasticsearch
+2025-07-01 03:17:25,194 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.053s]
+2025-07-01 03:17:25,228 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.025s]
+2025-07-01 03:17:25,230 - INFO - ✅ Insertados 809 documentos en índice 'alerts'
+2025-07-01 03:17:25,230 - INFO - 📤 Exportando colección 'jams' a Elasticsearch
+2025-07-01 03:17:25,270 - INFO - PUT http://elasticsearch:9200/_bulk [status:200 duration:0.028s]
+2025-07-01 03:17:25,272 - INFO - ✅ Insertados 366 documentos en índice 'jams'
+2025-07-01 03:17:25,272 - INFO - 📤 Exportando colección 'users' a Elasticsearch
+2025-07-01 03:17:25,273 - WARNING - ⚠ Colección 'users' vacía
+2025-07-01 03:17:25,273 - INFO - 🕓 Esperando 5 minutos para la próxima sincronización
+

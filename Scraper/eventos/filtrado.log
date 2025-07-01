@@ -1,0 +1,123 @@
+[2025-07-01T02:57:27.755Z] 📂 Iniciando filtrado a TSV (sobrescribir)
+[2025-07-01T02:57:27.757Z] ✅ Exportación TSV completa
+[2025-07-01T02:59:27.846Z] 📂 Iniciando filtrado a TSV (sobrescribir)
+[2025-07-01T02:59:27.850Z] 📝 Archivo sobrescrito: /app/eventos/jams.tsv (16 registros)
+[2025-07-01T02:59:27.854Z] 📝 Archivo sobrescrito: /app/eventos/alerts.tsv (38 registros)
+[2025-07-01T02:59:27.855Z] 📝 Archivo sobrescrito: /app/eventos/users.tsv (20 registros)
+[2025-07-01T02:59:27.855Z] ✅ Exportación TSV completa
+[2025-07-01T03:01:27.895Z] 📂 Iniciando filtrado a TSV (sobrescribir)
+[2025-07-01T03:01:27.898Z] 📝 Archivo sobrescrito: /app/eventos/jams.tsv (15 registros)
+[2025-07-01T03:01:27.901Z] 📝 Archivo sobrescrito: /app/eventos/alerts.tsv (37 registros)
+[2025-07-01T03:01:27.902Z] 📝 Archivo sobrescrito: /app/eventos/users.tsv (20 registros)
+[2025-07-01T03:01:27.903Z] ✅ Exportación TSV completa
+[2025-07-01T03:01:27.974Z] 📥 Insertados 39 documentos en alerts
+[2025-07-01T03:01:27.974Z] ✅ Archivo alerts_20250630_225933.json subido exitosamente a colección [alerts]
+[2025-07-01T03:01:27.999Z] 📥 Insertados 17 documentos en jams
+[2025-07-01T03:01:27.999Z] ✅ Archivo jams_20250630_225933.json subido exitosamente a colección [jams]
+[2025-07-01T03:01:28.001Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_225933.json
+[2025-07-01T03:03:22.956Z] 📂 Iniciando filtrado a TSV (sobrescribir)
+[2025-07-01T03:03:22.959Z] 🧹 Archivo borrado (sin datos nuevos): /app/eventos/jams.tsv
+[2025-07-01T03:03:22.959Z] 🧹 Archivo borrado (sin datos nuevos): /app/eventos/alerts.tsv
+[2025-07-01T03:03:22.959Z] 🧹 Archivo borrado (sin datos nuevos): /app/eventos/users.tsv
+[2025-07-01T03:03:22.960Z] ✅ Exportación TSV completa
+[2025-07-01T03:03:22.960Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_225933.json
+[2025-07-01T03:03:22.962Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_225933.json
+[2025-07-01T03:03:22.962Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_225933.json
+[2025-07-01T03:05:23.061Z] 📂 Iniciando filtrado a TSV (sobrescribir)
+[2025-07-01T03:05:23.066Z] 📝 Archivo sobrescrito: /app/eventos/jams.tsv (21 registros)
+[2025-07-01T03:05:23.071Z] 📝 Archivo sobrescrito: /app/eventos/alerts.tsv (36 registros)
+[2025-07-01T03:05:23.072Z] 📝 Archivo sobrescrito: /app/eventos/users.tsv (20 registros)
+[2025-07-01T03:05:23.072Z] ✅ Exportación TSV completa
+[2025-07-01T03:05:23.073Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_225933.json
+[2025-07-01T03:05:23.073Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_225933.json
+[2025-07-01T03:05:23.074Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_225933.json
+[2025-07-01T03:07:23.161Z] 📂 Iniciando filtrado a TSV (sobrescribir)
+[2025-07-01T03:07:23.164Z] 📝 Archivo sobrescrito: /app/eventos/jams.tsv (21 registros)
+[2025-07-01T03:07:23.165Z] 📝 Archivo sobrescrito: /app/eventos/alerts.tsv (36 registros)
+[2025-07-01T03:07:23.166Z] 📝 Archivo sobrescrito: /app/eventos/users.tsv (20 registros)
+[2025-07-01T03:07:23.166Z] ✅ Exportación TSV completa
+[2025-07-01T03:07:23.166Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_225933.json
+[2025-07-01T03:07:23.211Z] 📥 Insertados 37 documentos en alerts
+[2025-07-01T03:07:23.212Z] ✅ Archivo alerts_20250630_230528.json subido exitosamente a colección [alerts]
+[2025-07-01T03:07:23.214Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_225933.json
+[2025-07-01T03:07:23.228Z] 📥 Insertados 22 documentos en jams
+[2025-07-01T03:07:23.228Z] ✅ Archivo jams_20250630_230528.json subido exitosamente a colección [jams]
+[2025-07-01T03:07:23.229Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_225933.json
+[2025-07-01T03:07:23.230Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_230528.json
+[2025-07-01T03:09:23.261Z] 📂 Iniciando filtrado a TSV (sobrescribir)
+[2025-07-01T03:09:23.264Z] 📝 Archivo sobrescrito: /app/eventos/jams.tsv (15 registros)
+[2025-07-01T03:09:23.268Z] 📝 Archivo sobrescrito: /app/eventos/alerts.tsv (38 registros)
+[2025-07-01T03:09:23.268Z] 📝 Archivo sobrescrito: /app/eventos/users.tsv (20 registros)
+[2025-07-01T03:09:23.269Z] ✅ Exportación TSV completa
+[2025-07-01T03:09:23.269Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_225933.json
+[2025-07-01T03:09:23.269Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_230528.json
+[2025-07-01T03:09:23.269Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_225933.json
+[2025-07-01T03:09:23.269Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_230528.json
+[2025-07-01T03:09:23.269Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_225933.json
+[2025-07-01T03:09:23.270Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_230528.json
+[2025-07-01T03:11:23.266Z] 📂 Iniciando filtrado a TSV (sobrescribir)
+[2025-07-01T03:11:23.269Z] 📝 Archivo sobrescrito: /app/eventos/jams.tsv (15 registros)
+[2025-07-01T03:11:23.272Z] 📝 Archivo sobrescrito: /app/eventos/alerts.tsv (37 registros)
+[2025-07-01T03:11:23.273Z] 📝 Archivo sobrescrito: /app/eventos/users.tsv (20 registros)
+[2025-07-01T03:11:23.273Z] ✅ Exportación TSV completa
+[2025-07-01T03:11:23.274Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_225933.json
+[2025-07-01T03:11:23.274Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_230528.json
+[2025-07-01T03:11:23.286Z] 📥 Insertados 39 documentos en alerts
+[2025-07-01T03:11:23.287Z] ✅ Archivo alerts_20250630_230931.json subido exitosamente a colección [alerts]
+[2025-07-01T03:11:23.288Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_225933.json
+[2025-07-01T03:11:23.288Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_230528.json
+[2025-07-01T03:11:23.299Z] 📥 Insertados 16 documentos en jams
+[2025-07-01T03:11:23.299Z] ✅ Archivo jams_20250630_230931.json subido exitosamente a colección [jams]
+[2025-07-01T03:11:23.301Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_225933.json
+[2025-07-01T03:11:23.301Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_230528.json
+[2025-07-01T03:11:23.301Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_230931.json
+[2025-07-01T03:13:23.363Z] 📂 Iniciando filtrado a TSV (sobrescribir)
+[2025-07-01T03:13:23.366Z] 📝 Archivo sobrescrito: /app/eventos/jams.tsv (14 registros)
+[2025-07-01T03:13:23.368Z] 📝 Archivo sobrescrito: /app/eventos/alerts.tsv (37 registros)
+[2025-07-01T03:13:23.369Z] 📝 Archivo sobrescrito: /app/eventos/users.tsv (20 registros)
+[2025-07-01T03:13:23.369Z] ✅ Exportación TSV completa
+[2025-07-01T03:13:23.369Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_225933.json
+[2025-07-01T03:13:23.369Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_230528.json
+[2025-07-01T03:13:23.370Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_230931.json
+[2025-07-01T03:13:23.370Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_225933.json
+[2025-07-01T03:13:23.370Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_230528.json
+[2025-07-01T03:13:23.370Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_230931.json
+[2025-07-01T03:13:23.370Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_225933.json
+[2025-07-01T03:13:23.370Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_230528.json
+[2025-07-01T03:13:23.370Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_230931.json
+[2025-07-01T03:15:23.463Z] 📂 Iniciando filtrado a TSV (sobrescribir)
+[2025-07-01T03:15:23.466Z] 📝 Archivo sobrescrito: /app/eventos/jams.tsv (18 registros)
+[2025-07-01T03:15:23.468Z] 📝 Archivo sobrescrito: /app/eventos/alerts.tsv (36 registros)
+[2025-07-01T03:15:23.470Z] 📝 Archivo sobrescrito: /app/eventos/users.tsv (20 registros)
+[2025-07-01T03:15:23.470Z] ✅ Exportación TSV completa
+[2025-07-01T03:15:23.470Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_225933.json
+[2025-07-01T03:15:23.470Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_230528.json
+[2025-07-01T03:15:23.470Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_230931.json
+[2025-07-01T03:15:23.482Z] 📥 Insertados 38 documentos en alerts
+[2025-07-01T03:15:23.482Z] ✅ Archivo alerts_20250630_231334.json subido exitosamente a colección [alerts]
+[2025-07-01T03:15:23.484Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_225933.json
+[2025-07-01T03:15:23.484Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_230528.json
+[2025-07-01T03:15:23.484Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_230931.json
+[2025-07-01T03:15:23.494Z] 📥 Insertados 15 documentos en jams
+[2025-07-01T03:15:23.495Z] ✅ Archivo jams_20250630_231334.json subido exitosamente a colección [jams]
+[2025-07-01T03:15:23.497Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_225933.json
+[2025-07-01T03:15:23.497Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_230528.json
+[2025-07-01T03:15:23.497Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_230931.json
+[2025-07-01T03:15:23.497Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_231334.json
+[2025-07-01T03:17:23.464Z] 📂 Iniciando filtrado a TSV (sobrescribir)
+[2025-07-01T03:17:23.466Z] 📝 Archivo sobrescrito: /app/eventos/jams.tsv (14 registros)
+[2025-07-01T03:17:23.469Z] 📝 Archivo sobrescrito: /app/eventos/alerts.tsv (36 registros)
+[2025-07-01T03:17:23.470Z] 📝 Archivo sobrescrito: /app/eventos/users.tsv (20 registros)
+[2025-07-01T03:17:23.471Z] ✅ Exportación TSV completa
+[2025-07-01T03:17:23.471Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_225933.json
+[2025-07-01T03:17:23.471Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_230528.json
+[2025-07-01T03:17:23.472Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_230931.json
+[2025-07-01T03:17:23.472Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/alerts_20250630_231334.json
+[2025-07-01T03:17:23.472Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_225933.json
+[2025-07-01T03:17:23.472Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_230528.json
+[2025-07-01T03:17:23.472Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_230931.json
+[2025-07-01T03:17:23.472Z] ⏭️ Ya insertado anteriormente: /app/eventos/exports/jams_20250630_231334.json
+[2025-07-01T03:17:23.472Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_225933.json
+[2025-07-01T03:17:23.473Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_230528.json
+[2025-07-01T03:17:23.473Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_230931.json
+[2025-07-01T03:17:23.473Z] ⚠️ Archivo vacío: /app/eventos/exports/users_20250630_231334.json

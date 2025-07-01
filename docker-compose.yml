@@ -1,0 +1,112 @@
+
+
+services:
+  scraper:
+    build: ./Scraper
+    depends_on:
+      - mongo
+    volumes:
+      - ./Scraper/eventos:/app/eventos
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/app1db
+    cap_add:
+      - SYS_ADMIN
+    shm_size: 1gb
+
+  mongo:
+    build: ./Almacenamiento
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  mongo-to-es:
+    build: ./Visualizacion/Python
+    depends_on:
+      - mongo
+      - elasticsearch
+    restart: always
+    volumes:
+      - ./Scraper/eventos:/app/eventos  
+
+  pig:
+    build: ./Procesado
+    container_name: pig2
+    stdin_open: true
+    tty: true
+    shm_size: 2gb
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    environment:
+      - HADOOP_HOME=/opt/hadoop
+      - PIG_OPTS=-Xmx512m
+    depends_on:
+      - mongo
+    volumes:
+      - ./Scraper/eventos:/pig/eventos
+      - ./Procesado/analisis.pig:/pig/scripts/analisis.pig
+      - ./Procesado/pig_mongo.sh:/pig/scripts/pig_mongo.sh
+      - ./Procesado/logs:/pig/scripts/logs
+
+  filtro:
+   build: ./Filtrado
+   container_name: filtrado
+   depends_on:
+    - scraper
+   volumes:
+    - ./Scraper/eventos:/app/eventos
+   working_dir: /app
+   environment:
+    - MONGO_URL=mongodb://mongo:27017
+    - MONGO_DB=app1db
+   command: ["node", "Filtrado.js"]
+   restart: "no"
+
+
+  elasticsearch:
+    build: ./Visualizacion/Elastic
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.4
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - bootstrap.memory_lock=true
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+  kibana:
+    build: ./Visualizacion/Kibana
+    image: docker.elastic.co/kibana/kibana:8.13.4
+    container_name: kibana
+    depends_on:
+      - elasticsearch
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express
+    depends_on:
+      - mongo
+    ports:
+      - "8081:8081"
+    environment:
+      - ME_CONFIG_MONGODB_URL=mongodb://mongo:27017
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=admin    
+
+volumes:
+  mongodb_data: {}
+  es_data: {}

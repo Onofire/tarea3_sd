@@ -1,0 +1,14 @@
+{
+  "name": "API",
+  "version": "1.0.0",
+  "main": "API_DN.js",
+  "scripts": {
+    "start": "node API_DN.js"
+  },
+  "dependencies": {
+    "ioredis": "^5.3.2",
+    "mongodb": "^6.5.0"
+  }
+}
+
+  
